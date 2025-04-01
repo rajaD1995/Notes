@@ -1,0 +1,2032 @@
+----
+statistics towards machine learning -->
+----
+1- population vs sample = done 
+2- type of data = done 
+3- descriptive stats
+4- inferential stats
+5- advacned stats
+6- 2 project 
+
+1- population vs sample------------------------------------------------------------------------------------------------
+
+populatio - large group of entity (z-test)
+sample - randomly pick some individual is called sampel (t-test)
+
+population to sample == sampling technique 
+sampel to population == infernece technique 
+
+99% of test cases or dataset we will use sample formula 
+
+population - z-test - parameter - identify the charecteristics
+sample - t-test - statistic - making inferences about population
+
+====
+2- type of data
+	
+	categorical - yes | no , cat | dog , happy mood | depressed mood - classification algorithm
+	numerical data - contionuous & discrete
+	
+ml Algorithm-->
+	regression - dv(dependent variable) - contionuous(regression model)
+	classification - dv is categorical or binary 
+	clustering - no dv , data is discrete 
+			score -- 100 ( no more value after 100)
+====
+categorica - y/n, h/s, w/l, p/f, t/f, p/l ( ml-classification)
+continuous  - keep increase or decrease (ml - regression)
+				sales price, ticket price, salary price
+discret -- no dv- examples- ( score of the student) children ( 2 , 3)
+			rate of meal(1, 2, 3, 4, 5) 
+====
+levels of measurments -->
+
+qualitative 
+	nominal  -- cannot keep them in order format ( summer, winter, rainy, autmn)
+				autunm , rainy, summer 
+	ordinal - rate of the meal 1,2,3,4,5,
+			1- unapetizin , 2- disgustin, 3- neural 4- tasty, 5- delicious 
+
+quantitative-->
+	interval  - celcius & farenhite ( meal ) (100- 1000) -- has no 0
+	ratio - length ( 0-15) 0-30) -- has 0 
+=======
+3- Descriptive stats --> (number ) 
+	measure of central tendency --> 
+				mean | median | mode 
+	measure of assymetry
+				skewness | kurtois 
+	measure of variablity   
+				variance
+				standard deviation 
+				coefficient of variation
+	measure of relationship 
+			    covariance 
+===
+mean - average  | median - mid value when all the values arranged in asending order | mode - most occurance(can be zero, when all have 1 frequency)
+====
+
+outlier impact which strategy?
+	
+mean stragey always impact outlier 
+median & mode are not impacted by outlier 
+
+measure of assymetry
+				skewness | kurtois
+	
+skewness -
+	+ve skew (0 to 1)
+	-ve skew (-1 to 0)
+	0 skew 
+kurtois - (Pleae add range for different catagory of both and add graphs and it significances in data analysis- chatgpt)
+	leptokurtic (>3)
+	platykurtic (<3)
+	mesokurtic (=3)
+====
+measure of assymetry
+	skewness | kurtois
+	
+skewness -- define how the data skew ( which side data stays left or right)
+
+Skewness > 0: Right skew (positive skew)--Mean > Median > Mode--data skew towards left & Outliers on Right.
+   -Most values are concentrated on the left.
+   -Income distribution (few people earning very high salaries).
+   -A few extreme values (outliers) stretch the tail to the right.
+
+Skewness = 0: Symmetrical distribution.--Mean = Median = Mode
+	data skew at center and no outlier 
+	normal distribution == gausian distribution = bell curve = 0 symetry
+
+Skewness < 0: Left skew (negative skew)--Mean < Median < Mode--Outliers on Left.
+	data skew towards right and outlier is at left 
+   -Exam scores where most students score high, but a few score very low.
+   -Most values are concentrated on the right.
+   -A few extreme values stretch the tail to the left.
+
+every time we need to consider 0 skew 	
+---
+kurtois ===>
+---
+Skewness measures how asymmetrical a distribution is, 
+while kurtosis measures how peaked or heavy-tailed a distribution is.
+
+please add a graph for each case and explain like skewness chatgpat
+
++ve kurtosis = +ve skew = leptokurtic ( high tailed graph) =>3  
+-ve kurtosi = -ve skew = platykurtic ( low tailed graph) == <3
+normal distribation = 0 skew = mesokurtic ( normal distribution) = 3
+range of kurtois == (<3 to >3)
+
+3 - measure of variability 
+		variance
+		standard deviation
+		coefficeint of varaince 
+	
+variance -- tells us how data spread towards mean -->
+
+population mean - (Mu)
+sample mean - (x bar)
+
+population variance - sigma2
+sample variance - s2
+
+population sd (standard deviation) - sigma -->
+sample sd (standard deviation) - s
+
+#stadard deviation: compare to mean if it is less then the data points are close to mean.
+#if std is high compare to mean then datapoints are more spread.
+
+coeffieicent of variation -- sd / mean
+#This will tell you how close the std is to mean. (std/mean)x100
+	
+covariance -->
+---
+eda corelation -- realtion between 2 attribute == _1 to 1 
+corealtion in statistica terminology coveriance   
+ 
+---
+INFERENTIAL STATISTICS -->---------------------------------------------------------------------
+---
+
+DISTRIBUTION -- distribution concept born from PROBABILITY
+
+uniform distribution - never ever consider this  
+normal distribution  
+
+---
+Inferential stats we talked about distribution & probability -->
+----
+
+standarization we will use in ml cocnept standard scaler or z-score 
+time series -- same concept we can implete with white noise 
+
+=======
+z-score = x-mean/sd
+ml this concept - standadscaler ( every algorith we will implat transformer) 
+timeseries -- this concept ( whitenoise)
+========
+
+standarization -- standariziant is technique to convert normalstion distribution 
+to standard normal distice cover mean - 0 | sd - 1 (z-score)
+--
+ml project -- every TIME BEFORE trin the model i have to apply scaling 
+	feature scaling technqiue 
+---
+central limit theorem -->
+- suppose you have 1000 rows or records. Now you make a smaple of 10 records.
+- so the no of sample must be > the no of records in a sample i.e. 10 here.
+sample > then no. of records 
+---
+standard error -- sigma/root n 
+
+#Standard Error (SE)
+#compare sample & population
+#Standard Error (SE) measures the variability of a sample mean compared to the population mean.
+#It tells how much the sample mean is likely to vary if we take multiple samples from the same population.
+
+#Low SE:
+# Sample mean is close to the population mean.
+# Less variability between sample means.
+
+❗# High SE:
+# Sample mean may vary widely from the population mean.
+# More variability between sample means.
+
+---
+CONFIDENCE INTERVAL -->
+---
+
+95% CONFIDENT THAT MY SCORE IN MATH ( 90-100) 
+	-here 90 & 100 is estimaters and avg of these ie. 95 is the estimate.
+
+Use case- what should be my sale distribution of this month of 95% confidence level?
+
+90% -- 100% 
+confidence level == 1- alpha
+
+what is alpha == for 95% confidetn - 5% error- α is the significance level
+
+CI is divide into 2 part -->
+	population variance is known ( Z-TEST)
+	populatioon variance  unknow (T-TEST) ==SAMPEL 
+	
+when wever we build 
+
+z-score -- convert normal distrin to standard distribution mean - 0 & sd - 1- (value(x)-mean)/std
+z-table - z-table is the statistical table to compulet z-test ( fill the value after (1-(alpha/2)))
+z-test - z-test we can perform to find confidence inter for population 
+z-statistical test - test the dataset to find out intervew for 95% confidnec & 99% confidence 
+								finalize for the probelm statment
+Inferential statstics -->
+t-table, t-test , t-statstical 
+
+📚 Explanation:
+- α is the significance level (e.g., 0.05 for a 95% confidence level).
+- (α/2) splits the total significance between the two tails.
+- To obtain the Z-value from the table, we calculate:
+- To fetch the value from the Z-table in a two-tailed test, the formula is:
+Z(α/2) = 1 - (α/2)
+
+🔥 Example:
+For a 95% confidence level:
+- α = 0.05
+- α/2 = 0.025
+- Z(0.025) = 1 - 0.025 = 0.975
+- Look up 0.975 in the Z-table → Z-value ≈ 1.96.
+
+# 📚 Estimator Formulas for Statistics
+
+## 🎯 1. Mean (Average)
+- Population Mean:
+  μ = (ΣX) / N
+- Sample Mean:
+  x̄ = (ΣX) / n
+
+---
+
+## 📏 2. Variance
+- Population Variance:
+  σ² = (Σ(X - μ)²) / N
+- Sample Variance:
+  s² = (Σ(X - x̄)²) / (n - 1)
+
+---
+
+## 📊 3. Standard Deviation
+- Population Standard Deviation:
+  σ = √(σ²)
+- Sample Standard Deviation:
+  s = √(s²)
+
+---
+
+## 📚 5. Confidence Interval (CI)
+- For Population Mean:
+z== relaiability factor
+
+ CI = x̄ ± Z(1-(α/2))( * (σ / √n)
+
+## ✅ Formula:
+CI = x̄ ± t(n-1, 1-(α/2)) × (s / √n)
+
+✅ For a one-tailed test:
+
+Use stats.t.ppf(1 - alpha, df) for the right tail.
+
+Use stats.t.ppf(alpha, df) for the left tail.
+
+If you are calculating a two-tailed critical value, you should use: in code use this.
+
+t_score = stats.t.ppf(1 - alpha/2, degree_of_freedom)
+
+---
+
+## 🔍 6. Margin of Error (MOE)
+- MOE for Population Mean:
+  MOE = Z(α/2)* (σ / √n)
+- MOE for Proportion:
+  MOE = Z * √(p̂(1 - p̂) / n)
+
+---
+
+## 📈 7. Z-Score Formula
+- Z = (X - μ) / σ
+---
+
+## 🧠 8. T-Score Formula
+- T = (X - μ) / (s / √n)
+---
+
+## 🎲 9. Slope and Intercept for Linear Regression
+- Slope (m):
+  m = (Σ(xy) - (Σx)(Σy)/n) / (Σ(x²) - (Σx)²/n)
+- Intercept (b):
+  b = ȳ - m * x̄
+---
+
+## 📏 Explanation:
+- x̄ = Sample Mean
+- t(n-1, α/2) = t-value from t-distribution with degrees of freedom (df) (n - 1) at significance level (α/2)
+- s = Sample Standard Deviation
+- n = Sample Size
+---
+
+## 🔥 Example:
+- Sample Mean (x̄) = 105
+- Sample Standard Deviation (s) = 12
+- Sample Size (n) = 25
+- Degrees of Freedom (df) = n - 1 = 24
+- For 95% Confidence Level:
+    - α = 0.05
+    - α/2 = 0.025
+    - t(24, 0.025) ≈ 2.064 (from t-table)
+
+CI = 105 ± 2.064 × (12 / √25)
+CI = 105 ± 2.064 × 2.4
+CI = 105 ± 4.96
+
+➡️ Final CI: (100.04, 109.96)
+
+---
+
+## 📚 When to Use This Formula:
+- Use this formula when:
+    - The population standard deviation (σ) is **unknown**.
+    - The sample size is **small** (n < 30) or the data does not follow a normal distribution.
+
+✅ This formula is essential for constructing confidence intervals in real-life scenarios.
+
+ADVANCE STATS --
+--- 
+HYPOTHESIS TESTING
+TYPE OF ERRORS 
+P-VALUE 
+R2, ADJUSTED R2
+ANOVA 
+====
+End to end to stats practicle
+====
+
+Stats towards machine learning -->
+
+ds vs ai vs ml vs nlp vs dl vs nn(ann, cnn, rnn, gnn)vs gen ai vs llm model vs agentic ai 
+
+ml enginer
+nlp enginer 
+dl enginer
+gen ai devloper 
+llm devloper
+agentiic ai develeoper
+prompt engineer 
+
+after learn proper consider with planning no force in th grab a job 
+you can multiple wasy to open the job door
+
+# 📚 Hypothesis Testing and P-Values: A Comprehensive Guide for ML, DL, NLP, and AI
+
+---
+
+## 🎯 What is Hypothesis Testing?
+- Hypothesis testing is used to validate assumptions made about a population parameter using sample data.
+
+---
+
+## 📚 Use Cases of Hypothesis Testing:
+1. **Medical Trials:**
+   - H0: The new drug has no effect.
+   - H1: The new drug is more effective.
+   - ✅ **Reject H0** if the drug shows a positive effect → Use the new drug.
+
+2. **Fraud Detection in Banking:**
+   - H0: The transaction is not fraudulent.
+   - H1: The transaction is fraudulent.
+   - ✅ **Reject H0** if patterns suggest fraud → Flag the transaction.
+
+3. **Manufacturing Quality Control:**
+   - H0: Defect rate is acceptable.
+   - H1: Defect rate is too high.
+   - ✅ **Reject H0** if defects exceed limits → Take corrective action.
+
+---
+
+## 🍎 Example: Apple Price in Hyderabad
+- **Statement:** "The average price of 1 apple in Hyderabad is ₹500."
+- **Hypothesis:**
+    - H0: μ (mean price) = 500 → Null Hypothesis (no significant difference)
+    - H1: μ (mean price) ≠ 500 → Alternative Hypothesis (significant difference)
+
+---
+
+## 🔥 How to Test the Hypothesis?
+- 10 friends visit different stores and note the apple prices:
+    - Prices: [480, 520, 500, 490, 510, 480, 495, 505, 490, 515]
+    - **Sample Mean Price:** 498.5
+- **Decision:**
+    - Case 1: 498.5 ≈ 500 → Fail to reject H0 → Accept that the price is around ₹500.
+    - Case 2: If the mean was 450 or 550 → Reject H0 → Accept that the price is significantly different from ₹500.
+
+---
+
+## ✅ Why Reject or Accept H0?
+- **Reject H0:** We reject the null hypothesis when the sample data provides enough evidence that the population parameter is significantly different.
+    - **Why Important?** Helps us **identify a change or difference** that impacts decision-making.
+    - Example: If a new drug works better, reject H0 and adopt the new treatment.
+    
+- **Fail to Reject H0:** We fail to reject H0 when there is **not enough evidence** to suggest a significant difference.
+    - **Why Important?** Avoids making unnecessary changes when there’s **no real effect.**
+    - Example: If there’s no evidence that a new machine improves quality, keep using the existing machine.
+
+---
+
+## 📚 Types of Hypothesis:
+- **H0:** Null Hypothesis → No significant relationship or effect.
+- **H1/Ha:** Alternative Hypothesis → Significant relationship or effect.
+
+✅ **Goal:** Always try to reject the Null Hypothesis.
+
+---
+
+## 🚨 Errors in Hypothesis Testing
+1. **Type I Error (False Positive):**
+    - Rejecting a true null hypothesis.
+    - Example: Declaring a patient has a disease when they don’t.
+    - 🔥 **Cost:** Unnecessary treatment or intervention.
+
+2. **Type II Error (False Negative):**
+    - Failing to reject a false null hypothesis.
+    - Example: Missing a cancer diagnosis when the patient actually has cancer.
+    - 🔥 **Cost:** Delayed treatment and possible fatal consequences.
+
+---
+
+## 🤖 Relevance in Machine Learning (ML)
+- **Feature Selection:** Identifying attributes that significantly affect the target variable.
+    - Example: In fraud detection, determine if transaction amount affects fraud likelihood.
+- **Model Evaluation:** Statistical evaluation to compare model performance.
+    - Example: Checking if a new ML model significantly improves accuracy over a baseline.
+- **Confusion Matrix in Classification Models:**
+    - True Positive (TP) → Correctly predicting positive class.
+    - True Negative (TN) → Correctly predicting negative class.
+    - False Positive (FP) → Type I Error.
+    - False Negative (FN) → Type II Error.
+
+---
+
+## 📏 P-Value in Hypothesis Testing
+- **Definition:** P-value measures the probability of obtaining results at least as extreme as the observed, under H0.
+- **Significance Level (α):**
+    - Common threshold: 0.05 (95% confidence level).
+    - If p-value ≤ 0.05 → Reject H0.
+    - If p-value > 0.05 → Fail to reject H0.
+
+---
+
+## 🔎 P-Value in ML/DL/NLP/AI
+- Used in feature selection to assess the **relevance of attributes** for building models.
+- **Examples:**
+    - In Regression (MLR): Select features with p-value ≤ 0.05.
+    - In NLP: Evaluate feature importance.
+    - In AI: Analyze feature contributions in classification tasks.
+
+---
+
+## 🎯 Summary:
+- **Reject H0:** If data shows a significant difference, **adopt change**.
+- **Accept H0:** If data does not show significant evidence, **maintain status quo**.
+- **Minimize Errors:** Avoid false positives and false negatives in decision-making.
+
+✅ **This guide ensures you understand the essentials for applying statistical analysis in machine learning and AI models.**
+
+
+
+
+
+# 🎯 Understanding Why We Keep or Remove Attributes in Hypothesis Testing
+
+---
+
+## 📚 Hypothesis Testing Overview:
+- **Null Hypothesis (H0):** Assumes that there is **no relationship** between the attribute and the target variable.
+    - Example: “The attribute (feature) has no effect on the outcome.”
+- **Alternative Hypothesis (H1):** Assumes that there **is a relationship** between the attribute and the target variable.
+    - Example: “The attribute significantly affects the outcome.”
+
+---
+
+## 🔥 Why Do We Keep Attributes for Which We Reject the Null Hypothesis?
+
+✅ **When We Reject H0:**
+- Rejecting the null hypothesis means that there **is sufficient evidence** to conclude that the attribute has a significant relationship with the target variable.
+- **Reason to Keep:**
+    - Since the attribute affects the outcome, it contributes useful information and should be retained in the model.
+    - Removing such attributes would result in the loss of important information.
+
+---
+
+❌ **When We Fail to Reject H0:**
+- Failing to reject the null hypothesis means that **there is insufficient evidence** to conclude that the attribute has a significant effect on the outcome.
+- **Reason to Remove:**
+    - If an attribute does not contribute significantly to the model, it adds **noise** and unnecessarily increases model complexity.
+    - Removing such attributes improves model efficiency and reduces the risk of **overfitting**.
+
+---
+
+## 🧠 Why It Should Not Be the Opposite:
+- If we **remove attributes that are significant (reject H0)**, we lose valuable predictors.
+- If we **keep attributes that are not significant (fail to reject H0)**, the model includes irrelevant variables, leading to poor generalization and higher variance.
+
+---
+
+## 📚 Example:
+- Attribute A:
+    - p-value = 0.01 → Reject H0 → Significant → **Keep**
+- Attribute B:
+    - p-value = 0.40 → Fail to reject H0 → Not significant → **Remove**
+
+---
+
+## 🎯 Summary:
+- **Keep** attributes that **reject the null hypothesis** → They are significant.
+- **Remove** attributes that **fail to reject the null hypothesis** → They are not significant.
+
+✅ This approach ensures that the model retains only the most relevant and meaningful attributes.
+
+
+
+linear line equation == 
+
+actual datapoint = y
+predicted datapoint == y^
+
+mae == mean absolute error = (actual point - predicted)
+mse == means squer error  = (actual - predicted)2 ( remove all -ve)
+rmse == root mean squard error (it should low percentage of mean that means sample gives better result, sample mean and population mean is close)
+
+
+upcoming class we build ml regression model 
+after we build ml reg rmodel model is accuracy or not 
+based on rmse you will check the model behaviur 
+
+error = loss function = ols (ordinary least squrd) 
+
+y = mx + c
+y - dv 
+x- iv (x1,x2,xx---
+m- slope
+c - constan
+
+-- slope and constant will be calculated by model.
+---
+ANOVA FRAMEWORK-->
+---
+ANALYSIS OF VARIANCE 
+
+SSR (sum of squer regressor)
+SST (sum of square total)
+SSE (sum of squer error) 
+
+sst = ssr + sse 
+
+r2 = 1- ssr/sst 
+adjusted r2 
+
+range of r2 & adjusted r2 is 0-1
+after build reg model if model score is  1 ( 100 best model)
+if score -3 ( rework againg)
+
+if you work with multipl regression algoriytm ( more independtat ) adjusted r2
+
+if you build regression model --( r2 & adjusted r2) 0-1
+r2 > adjusted r2
+
+# 📚 ANOVA, SSR, SSE, SST, and R-Value Calculation
+
+---
+
+## 🔄 1. Analysis of Variance (ANOVA)
+- **Purpose:** To determine whether there is a statistically significant difference between the means of two or more groups.
+- **Key Components:**
+    - Between-group variance (explained by the model).
+    - Within-group variance (unexplained variance or error).
+
+---
+
+### 📏 2. Sum of Squares Formulas
+
+---
+
+### 📏 (i) SST (Total Sum of Squares)
+- Measures the total variation in the data.
+- **Formula:**
+𝓛𝓚𝓚 = ∑(y_i - ̅y)^2
+Where:
+- \(y_i\) = Actual value of observation
+- \(̅y\) = Mean of the observations
+
+---
+
+### 📏 (ii) SSR (Sum of Squares for Regression / Sum of Squares Between Groups)
+- Measures the variability explained by the model.
+- **Formula:**
+𝓛𝓛𝓛 = ∑(ŷ_i - ̅y)^2
+Where:
+- \(ŷ_i\) = Predicted value by the model
+
+---
+
+### 📏 (iii) SSE (Sum of Squares for Error / Sum of Squares Within Groups)
+- Measures the unexplained variability or error.
+- **Formula:**
+𝓛𝓛𝓚 = ∑(y_i - ŷ_i)^2
+
+---
+
+### 📏 3. Relationship between SST, SSR, and SSE
+𝓛𝓚𝓚 = 𝓛𝓛𝓛 + 𝓛𝓛𝓚
+Where:
+- SST: Total Sum of Squares
+- SSR: Explained Variation (Regression)
+- SSE: Unexplained Variation (Error)
+
+---
+
+### 📏 4. R-Squared (R²) - Coefficient of Determination
+- **Purpose:** To determine the proportion of variance explained by the model.
+- **Formula:**
+𝑒^2 = 𝓛𝓛𝓛 / 𝓛𝓚𝓚 = 1 - SSE / SST 
+
+---
+
+### 📏 5. F-Statistic Formula in ANOVA
+- **Formula:**
+𝐱 = 𝓛𝓛𝓛 / 𝓛𝓛𝓚
+
+---
+
+## 📚 6. Example Calculation
+- **Actual Values:** [50, 60, 65, 70, 75]
+- **Predicted Values:** [52, 58, 66, 72, 74]
+- **Mean:** (̅y) = 64.4
+
+### 𝓛𝓚𝓚 Calculation:
+𝓛𝓚𝓚 = (50 - 64.4)^2 + (60 - 64.4)^2 + (65 - 64.4)^2 + (70 - 64.4)^2 + (75 - 64.4)^2
+
+### 𝓛𝓛𝓛 Calculation:
+𝓛𝓛𝓛 = (52 - 64.4)^2 + (58 - 64.4)^2 + (66 - 64.4)^2 + (72 - 64.4)^2 + (74 - 64.4)^2
+
+### 𝓛𝓛𝓚 Calculation:
+𝓛𝓛𝓚 = (50 - 52)^2 + (60 - 58)^2 + (65 - 66)^2 + (70 - 72)^2 + (75 - 74)^2
+
+### 𝑒^2 Calculation:
+𝑒^2 = 𝓛𝓛𝓛 / 𝓛𝓚𝓚
+
+---
+
+## 🔄 7. Importance of R-Squared in ANOVA
+- Measures how much variance is explained by the model.
+- \(R^2\) helps assess the model's goodness-of-fit.
+
+---
+
+## 🔄 8. Decision-Making in ANOVA
+- **If F-statistic > Critical Value:** Reject null hypothesis.
+- **If p-value < 0.05:** Significant difference between groups.
+
+---
+
+## 👉🏻 Summary
+- **SST:** Total variation
+- **SSR:** Explained variation
+- **SSE:** Unexplained variation
+- **R²:** Proportion of explained variance
+
+
+
+
+performance measure of regression  --> r2 & adjusted r2 ( 0-1)
+preformance measure of classification --> confusion matrix (80%, 90% )
+
+STATS FOR MACHINE LEARNING WE ARE COMPLETED 
+
+1- POPULATION & SAMPLE
+		sampleig & inferece 
+2- TYPES OF DATA	
+		numer , categr, nominal, ordina, interval, ratio
+3- DESCRIPTIVE STATS
+		central tendecny, skew, kurto, variance, sd, coefficient variance
+4- INFERENTIAL STATS
+		prob, distributio, confidence inteve, z-test, t-test, z-tabl,, t-table, standar, clt 
+5- ADVANCE STAS
+		hypothesis testing type of error, p-value = 0.05,
+6- STATS FOR ML 
+		linear grapt , y, y^, m, x, c , mae, mse, rmse, anova, ssr, sse, sst, r2, adjusted r2
+		regression table --
+		
+stats we are completed 
+---
+Project -->
+---
+working profession -- please implate code to you realtime
+
+till today we worked in jupyter 
+ml -- I want everyone to check spyder 
+
+
+
+📚 Model Performance Evaluation Metrics
+
+📏 1. Regression Model Evaluation Metrics
+
+📏 (i) R-Value (Correlation Coefficient)
+
+Measures the strength and direction of a linear relationship between the predicted and actual values.
+
+Range: -1 to 1
+
+Closer to 1 → Strong positive correlation
+
+Closer to -1 → Strong negative correlation
+
+Near 0 → Weak or no correlation
+
+Formula:
+R = Cov(y, ŷ) / (σ_y * σ_ŷ)
+
+✅ Use Case: To understand how well the model captures the linear relationship.
+
+📏 (ii) Adjusted R-Squared
+
+Adjusted version of R^2 that penalizes adding unnecessary predictors.
+
+Formula:
+R_adj^2 = 1 - ((1 - R^2)(n - 1) / (n - k - 1))
+Where:
+
+n = Number of observations
+
+k = Number of predictors
+
+✅ Use Case: To assess the model's fit while considering the number of predictors.
+
+📏 (iii) Bias Score
+
+Measures how much the predicted values deviate from the actual values.
+
+Formula:
+Bias = (1/n) ∑(y_i - ŷ_i)
+
+✅ Use Case: To determine if the model consistently underestimates or overestimates.
+
+📏 (iv) Variance Score
+
+Measures how well the model captures variability in the target variable.
+
+Formula:
+Variance Score = 1 - Var(y - ŷ) / Var(y)
+
+✅ Use Case: To assess how much variability is captured by the model.
+
+📏 (v) Mean Squared Error (MSE)
+
+Measures the average squared difference between actual and predicted values.
+
+Formula:
+MSE = (1/n) ∑(y_i - ŷ_i)^2
+
+✅ Use Case: To evaluate the average magnitude of errors (sensitive to outliers).
+
+📏 (vi) Root Mean Squared Error (RMSE)
+
+Square root of MSE, providing error magnitude in original units.
+
+Formula:
+RMSE = √MSE
+
+✅ Use Case: To measure error magnitude and compare models effectively.
+
+📏 (vii) Mean Absolute Error (MAE)
+
+Measures the average absolute difference between actual and predicted values.
+
+Formula:
+MAE = (1/n) ∑|y_i - ŷ_i|
+
+✅ Use Case: Less sensitive to outliers than MSE.
+
+📏 (viii) Mean Absolute Percentage Error (MAPE)
+
+Measures prediction accuracy as a percentage of the actual values.
+
+Formula:
+MAPE = (1/n) ∑(|y_i - ŷ_i| / y_i) × 100
+
+✅ Use Case: Ideal for business models where percentage error is critical.
+
+🤖 2. Classification Model Evaluation Metrics
+
+📏 (i) Accuracy Score
+
+Measures the ratio of correctly predicted instances to total instances.
+
+Formula:
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+✅ Use Case: Suitable for balanced datasets.
+
+📏 (ii) Precision (Positive Predictive Value)
+
+Measures how many predicted positives are actually positive.
+
+Formula:
+Precision = TP / (TP + FP)
+
+✅ Use Case: Important in minimizing false positives.
+
+📏 (iii) Recall (Sensitivity or True Positive Rate)
+
+Measures how many actual positives were correctly identified.
+
+Formula:
+Recall = TP / (TP + FN)
+
+✅ Use Case: Important in minimizing false negatives (e.g., fraud detection).
+
+📏 (iv) F1 Score
+
+Harmonic mean of precision and recall.
+
+Formula:
+F1 Score = 2 × (Precision × Recall) / (Precision + Recall)
+
+✅ Use Case: Suitable for imbalanced datasets.
+
+📏 (v) ROC-AUC Score (Receiver Operating Characteristic)
+
+Measures the area under the ROC curve, balancing true positive and false positive rates.
+
+✅ Use Case: Ideal for assessing model discrimination.
+
+📏 (vi) Log Loss (Cross-Entropy Loss)
+
+Measures performance for probabilistic classification.
+
+✅ Use Case: Used in classification models where probabilistic outcomes are important.
+
+🧪 Summary:
+
+✅ For Regression:
+
+Use R-Value, Adjusted R-Squared, MSE, RMSE, MAE, Bias/Variance.
+
+RMSE and MSE give the error magnitude, while R-squared evaluates model fit.
+
+✅ For Classification:
+
+Use Accuracy, Precision, Recall, F1 Score, ROC-AUC.
+
+F1 Score is ideal for imbalanced datasets, while ROC-AUC evaluates overall performance.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ML
+
+^^^^^^ 18th 
+
+machine learning --> 
+	machine + learning 
+	
+meachine will learning historical data 
+historical data is alwasy raw data 
+raw data - clean data -- build ml model - test the model - predicted model on future data- deployemnt - production server - customer login to -- 
+
+ml pipeline -- complete steps from end - end model building prediction 
+each steps technical terms is called pipeline 
+
+ML has 3 phases -->
+	training phase
+	testing phase
+	validation phase 
+
+trainin & testing phase -- will alway apply on historical data ( past data)
+validation phase -- will apply on future data 
+
+we have split the dataset into trainin & testing 
+100 -- 75 record trainging + 25 record testing 
+100 -- 80 rec trainign + 20 record testing
+100 - 70 - 30
+100- 85-15 
+
+-----
+DATA PREPROCESSING PIPELINE -->
+-----
+1- we have dataset
+2- devide the data x & y ( iv & dv)
+3- 75-25 or 80-20 
+3- x is x-train, x-test 
+	y is y-train & y-test 
+
+=================
+HISTORICAL DATA ( TRAIN + TEST)
+FUTURE DATA ( VALIDATATION)
+MODEL - model train the data 
+DATA SPLIT RATIO - 75-25 | 80-20 | 70-30 
+data is divdin into x & y 
+x - x-train & x-test 
+y - y-train & y-test
+================================================
+Ml framework -->
+	sklearn(sckit learn)
+	xgboost (xtrame gradient boosting)
+	lgbm (light gradient boosting)
+	
+data preprocessing pipeline we are using:
+	impute transformer - categorical to numerical
+	simpleImputer -- it will fill missing value with mean, median, mode 
+
+fit & tranform 
+these transformer fit the data and transform the dataset to filled data no missing value  
+ml, nlp, dl, nn 
+
+^^^^^ 19th 
+
+Labelencoder -- transformer or imputation tehnique which converts categorical data to number
+SImplimputer - transfomer which fill missing value with para-mean| hyper- median & most_frequn
+
+sklearn.impute import simpleimputer
+sklearn.preprocessing import Lableencoder
+sklearn.model_selection import train_test_split 
+
+data preprocessing pipelien -->
+--
+data gatrhinc
+data claeaning )regex, date,tim)
+split the datax & y 
+x_train, x_test, 
+y_train, y_test
+=====
+modle build ( x_train+y_train)
+---
+OVERFITTING & UNDERFITTING -->
+---
+Overfitting, Underfitting, and Best Fit Model
+
+1. Overfitting
+	Definition: Model learns noise and details from the training data that negatively impact its performance on new data.
+	Characteristics:
+		Very high accuracy on training data.
+		Poor performance on test/validation data.
+	Example:
+		Decision tree with deep branches capturing every data point.
+		Logistic regression with high polynomial features.
+	Solutions:
+		Reduce model complexity (prune decision tree, reduce polynomial degree).
+		Increase training data.
+		Use regularization (L1, L2).
+
+2. Underfitting
+	Definition: Model is too simple and fails to capture the underlying pattern of the data.
+	Characteristics:
+		Low accuracy on both training and test data.
+		Model performs poorly on unseen data.
+	Example:
+		Linear regression applied to complex, non-linear data.
+	Solutions:
+		Increase model complexity.
+		Add more relevant features.
+		Reduce regularization.
+3. Best Fit Model
+	Definition: A model that captures the underlying pattern without overfitting or underfitting.
+	Characteristics:
+		Good balance between bias and variance.
+		Performs well on both training and test data.
+	Example:
+		Optimal polynomial degree in regression.
+		Well-pruned decision tree.
+	Methods to Achieve Best Fit:
+		Cross-validation.
+		Hyperparameter tuning.
+		Ensemble methods.
+Key Concept
+	Bias-Variance Tradeoff:
+	High bias → Underfitting.
+	High variance → Overfitting.
+	Goal is to achieve low bias and low variance.
+
+----
+what if overfitting happened then --> remove ir relavnat attribute
+we have some concept
+ 
+ 1- pca (principal component analysis)
+ 2- cross validation 
+ 3- regulaarization 
+ 4- ensamble learning
+ 5- drop out the neurons 
+ 
+^^^^^^^ 20th
+Regression --> if dv is continuous 
+		petrol price, sale price, dollar , varibel stock 
+
+LINEARE  REGRESSION ALGORITHM | LINEAR REGRESSION MODELS 
+	simple linear regression 
+	multiple linear regression 
+	l1 regression | lasso regualization 
+	l2 regression | ridge regualarization 
+	gradient descent
+	stocastic gradient descent 
+	batch gradident descent
+	time series 
+	
+NON LINEAR REGRESSION ALGORITHM | NON LINEAR REGRESSION MODELS 
+	polynomial regression 
+	support vector regression 
+	decission tree regressor 
+	random forest regressor
+	knearest neighbour regression
+	xgboost regressor
+	ann regressor 
+	lgbm regressor 
+
+----
+SIMPLE LINEAR REGRESSION --> 
+---
+Y= MX + C
+ y - dv | x-iv | m - slop | c- constant 
+
+ y = 0.4x + 2.4
+ 
+ ^^^^^^^ 21st 
+
+data preprocessing pipeline
+model buildiing pipeline
+test the model 
+visulaize the graph 
+====
+
+BIAS -- training data 
+	while we train the model (x_train & y_train) - trainin score 
+VARIANCE -- testing data 
+	while we test the model (x_test & y_test ) - test score 
+	
+
+train score - 90 & test score - 45 ==> high bias & low variace (underfitting model)
+train score - 45 & test score - 90 ==> low bias & hig variance ( overfitting model)
+
+BIAS -VARIANCE TRADEOFF 
+train score - 90 & test score - 85 ==> 
+	high bias & high variane ( low bias & low variance) (best fit model) 
+
+ ^^^^^ 22nd
+
+ WHAT IS MEAN BY PICKLE FILE  
+
+^^^^^ 25th
+y = mx + c  ( simple linear )
+y = m1x1 + m2x2 + m3x3 ( Multiple linear regression)
+
+stats api ( application program interface)
+	api - connect (stats - ml)
+
+how dataset is fit into math equation of mlr 
+
+use case = being datascientist need to find out right attirbute to invest the stocock
+model - MLR model 
+
+
+linearr egression we are calling simplelinea & multiple linear
+
+
+we need to find out the right attribute out of 6 attribute ( dummy variable we add)
+
+6 varianle -- 1 | I  have to remove 5 
+
+FEATURE ELIMINATION ?
+
+what is the technicq you apply in you previous project to removed feature elimination 
+
+feature elimination technique ?
+
+6 - how to eliminatre few feature 
+
+import statsmodels.api as sm
+
+feature engineering -- eda tehnciqe
+feature selection -- 
+	recurisve eliminat 
+		forwards elimination --> mod < p-value --> remove the attribute 
+		backward elimeint --> p-value > model gener SV --> remove the attribute 
+
+datascientist -- digital marketing ( future more proftit)
+manger -- dight ( many lead) -- got more profit 
+
+feature elimeinat - 
+
+recursive elimination 
+backward elimination p-value(0.05) > significance valyue generated by model 
+	reject the null hypothesis ( remove the attribute or remove the feature)
+forward eliment 	
+	significance valyue > p-value(0.05) 
+
+https://www.statsmodels.org/stable/api.html -- (you stats.api )
+=======
+
+                           OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 Profit   R-squared:                       0.951
+Model:                            OLS   Adj. R-squared:                  0.945
+Method:                 Least Squares   F-statistic:                     169.9
+Date:                Wed, 26 Mar 2025   Prob (F-statistic):           1.34e-27
+Time:                        20:14:48   Log-Likelihood:                -525.38
+No. Observations:                  50   AIC:                             1063.
+Df Residuals:                      44   BIC:                             1074.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const       5.008e+04   6952.587      7.204      0.000    3.61e+04    6.41e+04
+x1             0.8060      0.046     17.369      0.000       0.712       0.900
+x2            -0.0270      0.052     -0.517      0.608      -0.132       0.078
+x3             0.0270      0.017      1.574      0.123      -0.008       0.062
+x4            41.8870   3256.039      0.013      0.990   -6520.229    6604.003
+x5           240.6758   3338.857      0.072      0.943   -6488.349    6969.701
+==============================================================================
+Omnibus:                       14.782   Durbin-Watson:                   1.283
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               21.266
+Skew:                          -0.948   Prob(JB):                     2.41e-05
+Kurtosis:                       5.572   Cond. No.                     1.47e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.47e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+"""
+what ever quest -- they dont listen the class ( recording)
+few question will address next class. 
+every class recording for this. 
+if you have query please ping me -- right answer 
+
+^^^^^^^^ 27th
+AGENDA -->
+----
+1. BIAS & VARIANCE TRADEOFF
+
+2. REGULARIZATION TECHNQIUE
+	 L1
+	 L2
+	 ELASTICNET
+	 
+3- FEATURE SCALING
+4- PLAY PLACED STUDENT 
+
+====
+
+LOW BIAS HIGH VARIANCE ( close train data but very far test data) -- Overfitting 
+HIGH BIAS LOW VARIANCE ( close test but very far train data) -- underfitting
+LOW BIAS LOW VARIANCE ( BEST FIT MODEL) == BIAS VARIANCE TRADEOFF
+
+2- REGULARIZATION  -->
+------
+Technique to reduce to overfitting --> 
+------
+pca
+cross validation 
+regularization 
+ensamble learning 
+drop out the neuron 
+business understanding 
+
+Regularization --- regularize the highest coefficeint of independent variable 
+	to loweest coef is called regualarization technique
+
+	lasso regression | lasso regularization | l1 reg
+	ridge regression | ridge regulaarization | l2 reg 
+	elasticnet regression | elasticnet regularization 
+	
+
+ridge = l2 = reduce or scale down high coeffiecient to low coeffient but it never brint 
+						l2 ( coeffeince are never 0) ridge = loss + Penalty*2
+				
+lasso = l1 = reduce or scaled high eeffience to 0 thats mean remove the attribute 
+					l1 as feature elimination tecnique 
+					lasso = loss + penalty
+				
+No need to remember math equestion-- try to know wher it is implemebt 
+
+elasticnet = l1 + l2 
+
+overfit - case-1 :low bias high varince ( when we build the model with all attribut)
+				case-2 : if traine the model with high coeffinece ( overfitting)
+						l1, l2 
+
+practilce -- sklearn framework 
+		slr & mlr ( slope are created automatrice by sklearn)
+
+future algorithm ( sklearn itself adjust these l1, l2) 
+
+	(regualizat - l1, l2) 
+	
+svr ( regularizatoin=l2) 		
+---
+feature scaling -->
+---
+variane scale the featute 
+
+are hp, mpg ==> 
+ 
+ NORMALIZATION (MIN-MAX SCALER) MIN 0 & MAX-1
+	
+ STANDARIZATION  
+
+eda transformer -- one hot encoder, labelencoder, dummy variable 
+
+ml tranfoer -- Imput, Lableencoder, normalization (min- max scalreing )
+	standar scaler 
+	
+nlp transformer - gpt2 ,bert 
+
+dl transfromer
+
+
+range of normalization- min - max scaler ( 0-1)
+range of standerization - 3 to 3
+rant of r2 ,adust - 0-1 
+range of cole -1 to 1 | 0-1 | -1 to 0
+
+
+
+===========================================================================================================================================================
+Statistic measurements--------------------------------------------------------->
+code:
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as stats
+--------------------------------------------------------->
+-descriptive stats
+
+	descriptive_stats = sales_data['unit_sold'].describe()
+	print("\nThe descriptive state for unit sold:")
+	print(descriptive_stats)
+
+
+	mean_sales = sales_data['unit_sold'].mean() #descriptive_stats[1]
+	median_sales = sales_data['unit_sold'].median() #descriptive_stats[5]
+	mode_sales = sales_data['unit_sold'].mode()[0] 
+	variance_sales = sales_data['unit_sold'].var()
+	std_sales = sales_data['unit_sold'].std()  #descriptive_stats[2]
+	coef_of_var = (std_sales)/(mean_sales)
+
+	#groupby- category wise mean sell, median sell, std
+	category_sale = sales_data.groupby('category')['unit_sold'].agg(['sum', 'mean', 'std']).reset_index()
+	category_sale.columns = ['category', 'total_unit_sold', 'average unit sold', 'standard devition']
+--------------------------------------------------------->
+-Inferential Statistics
+	
+	confidence_level = 0.95
+	alfa = 1-confidence_level
+	degrees_freedom = len(sales_data['units_sold']) - 1
+	sample_mean = mean_sales
+	sample_standard_error = std_deviation_sales / np.sqrt(len(sales_data['units_sold']))
+
+	# t-score for the confidence level
+	t_score = stats.t.ppf((1 + confidence_level) / 2, degrees_freedom) or t_score = stats.t.ppf(1 - alpha/2, degree_of_freedom)
+	margin_of_error = t_score * sample_standard_error
+
+	confidence_interval = (sample_mean - margin_of_error, sample_mean + margin_of_error)
+--------------------------------------------------------->
+-Hypothesis Testing
+# Null hypothesis: Mean units sold is equal to 20
+# Alternative hypothesis: Mean units sold is not equal to 20
+
+	t_statistic, p_value = stats.ttest_1samp(sales_data['units_sold'], 20)
+
+	print("\nHypothesis Testing (t-test):")
+	print(f"T-statistic: {t_statistic}, P-value: {p_value}")
+
+	if p_value < 0.05:
+    		print("Reject the null hypothesis: The mean units sold is significantly different from 20.")
+	else:
+    		print("Fail to reject the null hypothesis: The mean units sold is not significantly different from 20.")
+
+--------------------------------------------------------->
+
+Purpose of the T-statistic:
+Measures Deviation from Hypothesis:
+It quantifies how much the sample mean deviates from the hypothesized population mean in units of standard error.
+
+Comparison with Critical Value:
+
+A large absolute value of the t-statistic indicates that the sample mean is far from the hypothesized mean.
+
+The further the t-statistic is from 0, the stronger the evidence against the null hypothesis.
+
+A high absolute t-statistic means that the sample mean is far from the hypothesized mean.
+
+A positive t-statistic indicates the sample mean is greater than the hypothesized mean, while a negative t-statistic suggests it's smaller.
+
+Basis for Calculating P-value:
+
+The t-statistic is used to calculate the p-value, which tells us the probability of obtaining results as extreme as the observed sample, assuming the null hypothesis is true.
+---------------------------------------------------------------------------------------------------------------------->
+-Filter- know the max frequency of a value in a column
+	mth_exp_tmp = pd.crosstab(index=income_df["Mthly_HH_Expense"], columns="count")
+	mth_exp_tmp.reset_index(inplace=True)
+	mth_exp_tmp[mth_exp_tmp['count'] == income_df.Mthly_HH_Expense.value_counts().max()]
+
+	or
+	
+	max_freq = sales_data[['unit_sold','category']].groupby('unit_sold').count() #dataframe
+	max_freq.reset_index(inplace=True)
+	max_freq.rename(columns = {'category': 'counts'},inplace=True)
+	max_freq[max_freq['counts']==max_freq['counts'].max()]
+
+-Standard Deviation for first 5 columns.
+	pd.DataFrame(income_df.iloc[:,0:5].std().to_frame()).T
+
+
+--------------------------------------------------------->Data preprocessing---------------------------------------------------------------------------------------------------------------------->
+Delete irrelevent attributes(titanic.csv)--------------------------------------------------------->
+#Name column can never decide survival of a person, hence we can safely delete it
+del titanic["Name"]
+del titanic["Ticket"]
+del titanic["Fare"]
+del titanic['Cabin']
+
+categorical to numerical without encoder without mapping--------------------------------------------------------->
+# Changing Value for "Male, Female" string values to numeric values , male=1 and female=2
+def getNumber(str):
+    if str=="male":
+        return 1
+    else:
+        return 2
+titanic["Gender"]=titanic["Sex"].apply(getNumber)
+#We have created a new column called "Gender" and 
+#filling it with values 1,2 based on the values of sex column
+titanic.head()
+
+#Deleting Sex column, since no use of it now
+del titanic["Sex"]
+---------------mapping-----------------------------
+-Here numerical to categorical but we can do opposite also.
+	target_label = {0 : 'No Heart Disease', 1 : 'Heart Disease'}
+	sex_label = {0 : 'Female', 1 : 'Male'}
+	# Create mapped columns (without modifying original data)
+	health['sex_mapped'] = health['sex'].map(sex_label)
+	health['target_mapped'] = health['target'].map(target_label)
+-------------encoder-----------------------------------
+# HOW TO ENCODE CATEGORICAL DATA & 
+	from sklearn.preprocessing import LabelEncoder
+	labelencoder_X = LabelEncoder()
+	labelencoder_X.fit_transform(X[:,0]) 
+	X[:,0] = labelencoder_X.fit_transform(X[:,0]) 
+	labelencoder_y = LabelEncoder()
+	y = labelencoder_y.fit_transform(y)
+----------------------CREATE A DUMMY VARIABLE--------------------------------
+imputation = pd.get_dummies(clean_data,dtype=int) #create new variables for all the categorigal attributes.
+-no of new attributes == the no of unique values in the categorical attributes
+
+check for null values---------------------------------------------------------------------------------------------------------------------->
+titanic.isnull().sum()
+---------------------------------------------------------------------------------------------------------------------->
+meanS= titanic[titanic.Survived==1].Age.mean()
+titanic["age"]=np.where(pd.isnull(titanic.Age) & titanic["Survived"]==1  ,meanS, titanic["Age"])
+
+meanNS=titanic[titanic.Survived==0].Age.mean()
+titanic.age.fillna(meanNS,inplace=True)
+
+del titanic['Age']
+
+Checking the relevance of a column on the basis of effect on DV ---------------------------------------------------------------------------------------------------------------------->
+# Finding the number of people who have Survived(DV)
+# given that they have embarked or boarded from a particular port
+
+survivedQ = titanic[titanic.Embarked == 'Q'][titanic.Survived == 1].shape[0]
+survivedC = titanic[titanic.Embarked == 'C'][titanic.Survived == 1].shape[0]
+survivedS = titanic[titanic.Embarked == 'S'][titanic.Survived == 1].shape[0]
+print(survivedQ)
+print(survivedC)
+print(survivedS)
+ and
+survivedQ = titanic[titanic.Embarked == 'Q'][titanic.Survived == 0].shape[0]
+survivedC = titanic[titanic.Embarked == 'C'][titanic.Survived == 0].shape[0]
+survivedS = titanic[titanic.Embarked == 'S'][titanic.Survived == 0].shape[0]
+print(survivedQ)
+print(survivedC)
+print(survivedS)
+
+columns name changing------------------------------------------------------------------------------------->
+titanic.rename(columns={'age':'Age'}, inplace=True)
+titanic.rename(columns={'Gender':'Sex'}, inplace=True)
+
+
+
+
+---------------------------------------------outliner detection and treatment:---------------------------------------------------------------------------
+
+-preprocessing
+	# Impute Age based on Survived status
+	-there are null values in age. the DV is survived(1- lived, 0- died)
+	-the mean age of the lived people is filled in the null place of the lived people
+	-the mean age of died people is filled in the null place of the died people
+	titanic_df.loc[titanic_df['Survived'] == 1, 'Age'] = titanic_df.loc[titanic_df['Survived'] == 1, 'Age'].fillna(titanic_df.loc[titanic_df['Survived'] == 1, 'Age'].median())
+	titanic_df.loc[titanic_df['Survived'] == 0, 'Age'] = titanic_df.loc[titanic_df['Survived'] == 0, 'Age'].fillna(titanic_df.loc[titanic_df['Survived'] == 0, 'Age'].median())
+
+	# Drop an attribute too many null values
+	titanic_df.drop(columns=['Cabin'], inplace=True)
+
+	# Fill categorigal by mode
+	titanic_df['Embarked'].fillna(titanic_df['Embarked'].mode()[0], inplace=True)
+
+-Detecting Outliers
+	-With z-value
+	for col in numerical_cols:
+    		col_data = titanic_df[col].dropna() #Drops missing values (NaN) from the selected column to avoid errors while calculating Z-scores.
+    		z_scores = np.abs(stats.zscore(col_data))
+    		outliers_z = col_data[z_scores > 3]
+    		print(f'Outliers in {col} using Z-Score:', outliers_z.tolist())
+
+	-IQR Method
+	for col in numerical_cols:
+    		col_data = titanic_df[col].dropna()
+    		Q1, Q3 = np.percentile(col_data, [25, 75])
+    		IQR = Q3 - Q1
+    		lower_bound, upper_bound = Q1 - 1.5 * IQR, Q3 + 1.5 * IQR
+    		outliers_iqr = col_data[(col_data < lower_bound) | (col_data > upper_bound)]
+   		print(f'Outliers in {col} using IQR:', outliers_iqr.tolist())
+
+	-Local Outlier Factor (LOF)
+	from sklearn.neighbors import LocalOutlierFactor
+
+	lof = LocalOutlierFactor(n_neighbors=20)
+	outlier_flags = lof.fit_predict(titanic_df[numerical_cols].fillna(titanic_df[numerical_cols].mean()))
+	titanic_df['LOF_Outlier'] = outlier_flags
+	print(titanic_df['LOF_Outlier'].value_counts())
+
+-Treating Outliers
+	-based on Z-value
+	-1️. Remove Outliers
+	titanic_df_no_outliers = titanic_df[~titanic_df[col].isin(outliers_z)]
+
+	-2️. Cap/Floor Extreme Values(replace with upper bound and lower bound)
+	upper_bound = col_data.mean() + 3 * col_data.std()
+	lower_bound = col_data.mean() - 3 * col_data.std()
+
+	# Capping outliers
+	titanic_df[col] = np.clip(titanic_df[col], lower_bound, upper_bound)
+
+
+	-Trimming Outliers
+	for col in numerical_cols:
+    		Q1, Q3 = np.percentile(titanic_df[col].dropna(), [25, 75])
+    		IQR = Q3 - Q1
+    		lower_bound, upper_bound = Q1 - 1.5 * IQR, Q3 + 1.5 * IQR
+
+    		#If a value is smaller than the lower_bound, it replaces it with the lower_bound. Otherwise, it keeps the original value.
+    		titanic_df[col] = np.where(titanic_df[col] < lower_bound, lower_bound, titanic_df[col])
+
+    		#If a value is greater than the upper_bound, it replaces it with the upper_bound. Otherwise, it keeps the original value.
+    		titanic_df[col] = np.where(titanic_df[col] > upper_bound, upper_bound, titanic_df[col])
+
+	-Capping Outliers
+	for col in numerical_cols:
+    		upper_limit = titanic_df[col].quantile(0.99)
+    		lower_limit = titanic_df[col].quantile(0.01)
+
+    		#Values less than the lower_limit are replaced with the lower_limit.
+    		#Values greater than the upper_limit are replaced with the upper_limit.
+    		#Values within the range [lower_limit, upper_limit] remain unchanged.
+    		titanic_df[col] = np.clip(titanic_df[col], lower_limit, upper_limit)
+
+	-Log Transformation
+		for col in ['Fare', 'Age']:
+    			titanic_df[col] = np.log1p(titanic_df[col])
+
+ML ------------------------------------------------SLR---------------------------------------------------
+#  IMPORTNING THE LIBRARY
+	import numpy as np		
+	import matplotlib.pyplot as plt		
+	import pandas as pd		
+#--------------------------------------------
+	# import the dataset & divided my dataset into independe & dependent
+	dataset = pd.read_csv(r'C:/Users/USER/Documents/Python/NareshIT/20 march SLR workshop/Salary_Data.csv')
+	X = dataset.iloc[:, :-1].values	
+	y = dataset.iloc[:,3].values  
+#--------------------------------------------
+	#filling the missing value by ML transformer
+	from sklearn.impute import SimpleImputer # SPYDER 4 
+	imputer = SimpleImputer() 
+	imputer = imputer.fit(X[:,1:3]) 
+	X[:, 1:3] = imputer.transform(X[:,1:3])
+#--------------------------------------------
+	# HOW TO ENCODE CATEGORICAL DATA & CREATE A DUMMY VARIABLE
+	from sklearn.preprocessing import LabelEncoder
+	labelencoder_X = LabelEncoder()
+	labelencoder_X.fit_transform(X[:,0]) 
+	X[:,0] = labelencoder_X.fit_transform(X[:,0]) 
+	labelencoder_y = LabelEncoder()
+	y = labelencoder_y.fit_transform(y)	
+#-----------------------------------------------------------------------
+
+#SPLITING THE DATASET IN TRAINING SET & TESTING SET
+	from sklearn.model_selection import train_test_split
+	X_train,X_test,y_train,y_test = train_test_split(X, y, test_size= 0.2, random_state=0) 
+#-----------------------------------------------------------------------
+	#FEATURE SCALING
+	from sklearn.preprocessing import Normalizer
+	sc_X = Normalizer() 
+	X_train = sc_X.fit_transform(X_train)
+	X_test = sc_X.transform(X_test)
+
+	or use standarization
+Do this when model accuracy need to be improved
+
+#-----------------------------------------------------------------------
+	#x- df and y- series, so to make x_train & x_test array of float
+	x_train = x_train.values.reshape(-1, 1)
+	x_test = x_test.values.reshape(-1, 1)
+#-----------------------------------------------------------------------
+	#train to build a model
+	from sklearn.linear_model import LinearRegression
+	regressor = LinearRegression()
+	regressor.fit(x_train, y_train)
+#-----------------------------------------------------------------------
+	y_pred = regressor.predict(x_test) 
+	# Now copmare with test values with model.
+	plt.scatter(x_test, y_test, color = 'red')  
+	plt.plot(x_test, regressor.predict(x_test), color = 'blue', marker='o')  
+	plt.title('Salary vs Experience (Test set)')
+	plt.xlabel('Years of Experience')
+	plt.ylabel('Salary')
+	plt.show()
+#-----------------------------------------------------------------------
+	# Uptill we just bulit a model. Yet to predict future for that c and m need to be calculated.
+	# Statistic calculation is yet to be calculated to check if it is good model.
+	#compare train values with model
+	plt.scatter(x_train, y_train, color = 'red')  
+	plt.plot(x_train, regressor.predict(x_train), color = 'blue', marker='o')  
+	plt.title('Salary vs Experience (Test set)')
+	plt.xlabel('Years of Experience')
+	plt.ylabel('Salary')
+	plt.show()
+#--------------------Future prediction-----------------------------------------
+	#y=mx+c
+	#m(slope)
+	m=regressor.coef_
+	print(f"Coefficient: {m}")
+
+	#c- constant
+	c=regressor.intercept_
+	print("Intercept:",{c})
+#-----------------------------------------------------------------------
+	#comparision b/w predicted and actual test data.
+	comparision = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+	print(comparision)
+
+	#comparision b/w predicted and actual train data.
+	comparision_train = pd.DataFrame({'Actual': y_train, 'Predicted': regressor.predict(x_train)})
+	print(comparision_train)
+#-----------------------------------------------------------------------
+	#prediction of salary of 12y experience.
+	salary_12y = m*12 + c
+	print(salary_12y)
+	# This is the the way you should predict the future.
+	y_12 = regressor.predict([[12]])
+	y_20 = regressor.predict([[20]])
+	print(f"Predicted salary for 12 years of experience: ${y_12[0]:,.2f}")
+	print(f"Predicted salary for 20 years of experience: ${y_20[0]:,.2f}")
+#-----------------------------------------------------------------------
+	#bias score
+	bias = regressor.score(x_train, y_train)
+	print(bias)
+
+	#variance score
+	variance = regressor.score(x_test, y_test)
+	print(variance)
+
+#----------------------------------STATISTICS----------------------------------
+	#mean
+	dataset.mean()
+	dataset['YearsExperience'].mean()
+	dataset['Salary'].mean()
+
+	#median
+	dataset.median()
+	dataset['YearsExperience'].median()
+	dataset['Salary'].median()
+
+	#mode
+	dataset.mode()
+	dataset['YearsExperience'].mode()
+	dataset['Salary'].mode()
+
+	#VARIANCE: spread data towards mean.
+	dataset.var()
+	dataset['YearsExperience'].var()
+	dataset['Salary'].var()
+	#stadard deviation: compare to mean if it is less then the data points are close to mean.
+	#if std is high compare to mean then datapoints are more spread.
+	dataset.std()
+	dataset['YearsExperience'].std()
+	dataset['Salary'].std()
+
+	#Coefficient of Variation(CV)
+	#This will tell you how close the std is to mean. (std/mean)x100
+	from scipy.stats import variation
+
+	variation(dataset.values)
+	#std of YearsExperience is 52.5% of mean of YearsExperience.
+	#std of Salary is 35.4% of the mean of Salary.
+	variation(dataset['YearsExperience'].values) #0.5251
+	variation(dataset['Salary'].values)  #0.354
+
+
+	#How to know dependent variable has positive relation or negative with any dependent variable
+	# By correletion-- corr()
+	dataset.corr()
+	dataset['YearsExperience'].corr(dataset['Salary'])
+
+
+	#Skewness = 0: Symmetrical distribution.--Mean = Median = Mode
+
+	#Skewness > 0: Right skew (positive skew)--Mean > Median > Mode--Outliers on Right.
+	#   -Most values are concentrated on the left.
+	#   -Income distribution (few people earning very high salaries).
+	#   -A few extreme values (outliers) stretch the tail to the right.
+
+	#Skewness < 0: Left skew (negative skew)--Mean < Median < Mode--Outliers on Left.
+	#   -Exam scores where most students score high, but a few score very low.
+	#   -Most values are concentrated on the right.
+	#   -A few extreme values stretch the tail to the left.
+
+	#skewness
+	dataset.skew()
+	dataset['YearsExperience'].skew()
+	dataset['Salary'].skew()
+	#both attributes are positive skewness.
+	#   -Some employees have high salay
+	#   -Some employees have high years of experience too.
+	#   -most datapoints are concentreted on the left of the mean.
+
+
+	#Standard Error (SE)
+	#compare sample & population
+	#Standard Error (SE) measures the variability of a sample mean compared to the population mean.
+	#It tells how much the sample mean is likely to vary if we take multiple samples from the same population.
+
+	#Low SE:
+	# Sample mean is close to the population mean.
+	# Less variability between sample means.
+
+	❗# High SE:
+	# Sample mean may vary widely from the population mean.
+	# More variability between sample means.
+	dataset.sem()
+	dataset['YearsExperience'].sem()
+	dataset['Salary'].sem()
+
+
+	import scipy.stats as stats
+	#Z-score-- for scalling for ML model. scalling means bring down all numerical data in same range.
+	#feature scaling- (-3 to 3)
+	dataset.apply(stats.zscore)
+
+	#degree of freedom
+	a=dataset.shape[0]
+	b=dataset.shape[1]
+	degree_of_freedom = a-b
+	print(degree_of_freedom)
+
+
+	#sum of square regression(ssr)
+	y_mean = np.mean(y)
+	ssr = np.sum((y_pred-y_mean)**2)
+	print(ssr)
+
+
+	#SSE
+	y = y[0:6]
+	sse = np.sum((y-y_pred)**2)
+	print(sse)
+
+	#SST
+	mean_total = np.mean(dataset.values)
+	sst = np.sum((dataset.values-mean_total)**2)
+	print(sst)
+
+#to check the model accuracy------------------------------------------------------
+
+	#r- square (0 to 1- for good model)
+	R_square = 1-(ssr/sst)
+	R_square
+ 
+	#bias score(Should be high 0.9 or 0.85 or like that)
+	bias = regressor.score(x_train, y_train)
+	#variance score(Should be high 0.9 or 0.85 or like that)
+	variance = regressor.score(x_test, y_test)
+
+#Interpreting MSE
+#✅ Low MSE:
+    #Model predictions are close to actual values.
+    #Better model performance.
+    #MSE is much smaller than the variance of the target variable.
+    #MSE is much smaller than the square of the mean.
+    #🎒 Example 1: Predicting Student Marks
+    #Actual Scores: [50, 60, 55, 70]
+    #Predicted Scores: [52, 62, 54, 72]
+    #MSE: 3.25
+    #✅ Interpretation:
+    #Since the scores range between 50 to 70, an MSE of 3.25 is low, indicating a good model.
+
+#❗️ High MSE:
+    #Model predictions deviate significantly from actual values.
+    #Poor model performance.
+    #MSE is close to or higher than the variance of the target variable.
+    #MSE is comparable to or larger than the square of the mean.
+    
+    #💸 Example 2: Predicting Employee Salaries
+    #Actual Salaries: [45,000, 50,000, 55,000, 60,000]
+    #Predicted Salaries: [46,000, 49,000, 54,500, 61,000]
+    #MSE: 625,000
+    #❗️ Interpretation:
+    #Since the salary values are in the range of 45,000 to 60,000, an MSE of 625,000 is relatively high, suggesting that the predictions have a higher error.
+#Using RMSE for Better Interpretation
+#✅ Why RMSE?
+#MSE is in squared units, making it harder to interpret directly.
+#Root Mean Squared Error (RMSE) is the square root of MSE and is in the same units as the target variable, making it easier to compare.
+
+	train_mse = mean_squared_error(y_train, regressor.predict(X_train))
+	test_mse = mean_squared_error(y_test, y_pred)
+
+	print(f"Training Score (R^2): {bias:.2f}")
+	print(f"Testing Score (R^2): {variance:.2f}")
+	print(f"Training MSE: {train_mse:.2f}")
+	print(f"Test MSE: {test_mse:.2f}")
+
+	print(regressor)
+
+
+---------------------------------------------------Front end actual one with pickle file for SLR---------------------------------
+In SLR we predcit future value with the help of model.
+#-----------------------------------------------------------------------
+import numpy as np  
+import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import pickle
+#-----------------------------------------------------------------------
+# Load the dataset
+dataset = pd.read_csv(r'C:\Users\USER\Documents\Python\NareshIT\22 march\Salary_Data.csv')
+#-----------------------------------------------------------------------
+# Split the data into independent and dependent variables
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, -1].values
+#-----------------------------------------------------------------------
+# Split the dataset into training and testing sets (80-20%)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=0)
+#-----------------------------------------------------------------------
+# Train the model
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+#-----------------------------------pickle file only use this train model for front end------------------------------------
+# Predict the test set
+y_pred = regressor.predict(X_test)
+#-----------------------------------------------------------------------
+#comparision for y_test vs y_pred
+comparison = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+print(comparison)
+#-----------------------------------------------------------------------
+# Visualize the training set
+plt.scatter(X_train, y_train, color='red')
+plt.plot(X_train, regressor.predict(X_train), color='blue',marker='o')
+plt.title('Salary vs Experience (Training set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+
+# Visualize the test set
+plt.scatter(X_test, y_test, color='red')
+plt.plot(X_test, regressor.predict(X_test), color='blue',marker='o')
+plt.title('Salary vs Experience (Test set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+#-----------------------------------------------------------------------
+# Predict salary for 12 and 20 years of experience using the trained model
+y_12 = regressor.predict([[12]])
+y_20 = regressor.predict([[20]])
+print(f"Predicted salary for 12 years of experience: ${y_12[0]:,.2f}")
+print(f"Predicted salary for 20 years of experience: ${y_20[0]:,.2f}")
+#-----------------------------------------------------------------------
+# Check model performance
+bias = regressor.score(X_train, y_train)
+variance = regressor.score(X_test, y_test)
+train_mse = mean_squared_error(y_train, regressor.predict(X_train))
+test_mse = mean_squared_error(y_test, y_pred)
+
+print(f"Training Score (R^2): {bias:.2f}")
+print(f"Testing Score (R^2): {variance:.2f}")
+print(f"Training MSE: {train_mse:.2f}")
+print(f"Test MSE: {test_mse:.2f}")
+#-----------------------------save as pickle file------------------------------------------
+# Save the trained model to disk
+import pickle
+filename = 'linear_regression_model.pkl'
+with open(filename, 'wb') as file:
+     pickle.dump(regressor, file)
+print("Model has been pickled and saved as linear_regression_model.pkl")
+#-----------------------------------------------------------------------
+import os
+print(os.getcwd())
+
+#-------------------------------new .py file for streamlit----------------------------------------
+import streamlit as st 
+import pickle 
+import numpy as np 
+#-----------------------------------------------------------------------
+# Load the saved model 
+model = pickle.load(open(r'C:\Users\USER\Documents\Python\NareshIT\22 march\linear_regression_model.pkl', 'rb')) 
+#-----------------------------------------------------------------------
+# Set the title of the Streamlit app 
+st.title("Salary Prediction App") 
+# Add a brief description 
+st.write("This app predicts the salary based on years of experience using a simple linear regression model.") 
+#-----------------------------------------------------------------------
+# Add input widget for user to enter years of experience 
+years_experience = st.number_input("Enter Years of Experience:", min_value=0.0, max_value=50.0, value=1.0, step=0.5) 
+#-----------------------------------------------------------------------
+# When the button is clicked, make predictions 
+if st.button("Predict Salary"): 
+    # Make a prediction using the trained model 
+    experience_input = np.array([[years_experience]]) 
+    # Convert the input to a 2D array for prediction 
+    prediction = model.predict(experience_input)
+    # Display the result 
+    st.success(f"The predicted salary for {years_experience} y is {prediction[0]:,.2f}")
+#-----------------------------------------------------------------------
+# Display information about the model 
+st.write("The model was trained using a dataset of salaries and years of experience.built model by prakash senapati")
+
+
+
+#-----------------------------------------------------------------------MLR-----------------------------------------------------------------------
+1. This statemodels.api Ordinary least square method(OLS)
+we have to use loop to auomize the feature elimination process for p-value>0.05
+===================================================================================
+Feature elimination is the main concept with the help of OLS of statsmodels api
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+#-----------------------------------------------------------------------
+dataset = pd.read_csv(r"C:/Users/USER/Documents/Python/NareshIT/26 march/Investment.csv")
+#-----------------------------------------------------------------------
+
+x = dataset.iloc[:,:-1]
+y = dataset.iloc[:,-1]
+#-----------------------------------------------------------------------
+#eda transformer- to change categorical to numerical- variable creation
+x = pd.get_dummies(x,dtype=int)
+#-----------------------------------------------------------------------
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x,y,train_size=0.8,random_state=0)
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(x_train,y_train)
+#-----------------------------------------------------------------------
+y_pred = regressor.predict(x_test)
+m_slope = regressor.coef_
+print(m_slope)
+c_incept = regressor.intercept_
+print(c_incept)
+#-----------------------------------------------------------------------
+#x = np.append(arr= np.ones((50,1)).astype(int),values=x,axis=1) #become array
+x = np.append(arr=np.full((50, 1), 42467).astype(int), values=x, axis=1)
+x
+
+Feature elimination: Different process to eliminate the features:
+
+========================================================================================
+#Feature elimination with the help of OLS table ie p-value-----------------------------------------------------------------------
+import statsmodels.api as sm
+x_opt = x[:,[0,1,2,3,4,5]]
+regressor_OLS = sm.OLS(endog=y, exog = x_opt).fit()
+regressor_OLS.summary()
+#-----------------------------------------------------------------------
+#backword elemination
+#highest p value is x4- remove it
+x_opt = x[:,[0,1,2,3,5]]
+regressor_OLS = sm.OLS(endog=y, exog = x_opt).fit()
+regressor_OLS.summary()
+#-----------------------------------------------------------------------
+x_opt = x[:,[0,1,2,3]]
+regressor_OLS = sm.OLS(endog=y, exog = x_opt).fit()
+regressor_OLS.summary()
+#-----------------------------------------------------------------------
+x_opt = x[:,[0,1,3]]
+regressor_OLS = sm.OLS(endog=y, exog = x_opt).fit()
+regressor_OLS.summary()
+#-----------------------------------------------------------------------
+x_opt = x[:,[0,1]]
+regressor_OLS = sm.OLS(endog=y, exog = x_opt).fit()
+regressor_OLS.summary()
+
+=================================================================================
+2. L1 : Lasso regularization: Few feature coefficient will become zero ie eliminated
+=================================================================================
+#Import numerical libraries
+import pandas as pd
+import numpy as np
+
+#Import graphical plotting libraries
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+#Import Linear Regression Machine Learning Libraries
+from sklearn import preprocessing
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.model_selection import train_test_split
+
+from sklearn.linear_model import LinearRegression, Ridge, Lasso
+from sklearn.metrics import r2_score
+---------------------------------------------------------------------------------------------------------------------------
+data = pd.read_csv('../input/carmpg/car-mpg (1).csv')
+
+#Drop car name
+#Replace origin into 1,2,3.. dont forget get_dummies
+#Replace ? with nan
+#Replace all nan with median
+
+data = data.drop(['car_name'], axis = 1)
+data['origin'] = data['origin'].replace({1: 'america', 2: 'europe', 3: 'asia'})
+data = pd.get_dummies(data,columns = ['origin'])
+data = data.replace('?', np.nan)
+data = data.apply(lambda x: x.fillna(x.median()), axis = 0)
+---------------------------------------------------------------------------------------------------------------------------
+Model building
+---------------------------------------------------------------------------------------------------------------------------
+*The reason we don't scale the entire data before and then divide it into train(X) & test(y) is because once you scale the data,
+ the type(data_s) would be numpy.ndarray. It's impossible to divide this data when it's an array. 
+*
+
+Hence we divide type(data) pandas.DataFrame, then proceed to scaling it.
+---------------------------------------------------------------------------------------------------------------------------
+X = data.drop(['mpg'], axis = 1) # independent variable
+y = data[['mpg']] #dependent variable
+---------------------------------------------------------------------------------------------------------------------------
+#Scaling the data
+
+X_s = preprocessing.scale(X)
+X_s = pd.DataFrame(X_s, columns = X.columns) #converting scaled data into dataframe
+
+y_s = preprocessing.scale(y)
+y_s = pd.DataFrame(y_s, columns = y.columns) #ideally train, test data should be in columns
+
+#Split into train, test set
+
+X_train, X_test, y_train,y_test = train_test_split(X_s, y_s, test_size = 0.30, random_state = 1)
+X_train.shape
+---------------------------------------------------------------------------------------------------------------------------
+1. Simple Linear Model
+
+#Fit simple linear model and find coefficients
+regression_model = LinearRegression()
+regression_model.fit(X_train, y_train)
+
+for idx, col_name in enumerate(X_train.columns):
+    print('The coefficient for {} is {}'.format(col_name, regression_model.coef_[0][idx]))
+    
+intercept = regression_model.intercept_[0]
+print('The intercept is {}'.format(intercept))
+---------------------------------------------------------------------------------------------------------------------------
+2. Regularized Ridge Regression
+
+#alpha factor here is lambda (penalty term) which helps to reduce the magnitude of coeff
+
+ridge_model = Ridge(alpha = 0.3)
+ridge_model.fit(X_train, y_train)
+
+print('Ridge model coef: {}'.format(ridge_model.coef_))
+#As the data has 10 columns hence 10 coefficients appear here    
+---------------------------------------------------------------------------------------------------------------------------
+3. Regularized Lasso Regression
+
+#alpha factor here is lambda (penalty term) which helps to reduce the magnitude of coeff
+
+lasso_model = Lasso(alpha = 0.1)
+lasso_model.fit(X_train, y_train)
+
+print('Lasso model coef: {}'.format(lasso_model.coef_))
+#As the data has 10 columns hence 10 coefficients appear here   
+---------------------------------------------------------------------------------------------------------------------------
+Score Comparison
+
+#Model score - r^2 or coeff of determinant
+#r^2 = 1-(RSS/TSS) = Regression error/TSS 
+
+
+#Simple Linear Model
+print(regression_model.score(X_train, y_train))
+print(regression_model.score(X_test, y_test))
+
+print('*************************')
+#Ridge
+print(ridge_model.score(X_train, y_train))
+print(ridge_model.score(X_test, y_test))
+
+print('*************************')
+#Lasso
+print(lasso_model.score(X_train, y_train))
+print(lasso_model.score(X_test, y_test))
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
